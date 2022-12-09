@@ -1,0 +1,56 @@
+.navigation {
+
+  border-bottom: solid 7px $color-white;
+  box-shadow: 19px 19px 26px rgba(0,0,0,0.11);
+  padding-bottom: 20px;
+  position: fixed;
+  width: 100vw;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+
+    a {
+      text-decoration: none;
+      color: $color-white;
+      padding: 10px;
+
+      li {
+        transition: 0.2s;
+        cursor: pointer;
+        list-style-type: none;
+      }
+    }
+
+    .nav-active {
+      position: relative;
+
+      &::after {
+        content: "";
+        height: 4px;
+        width: 0;
+        position: absolute;
+        border-radius: 10px;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $color-blue;
+        -webkit-animation: anim 0.3s ease forwards;
+        animation: anim 0.6s ease forwards;
+
+        @-webkit-keyframes anim {
+          to {
+            width: 100%;
+          }
+        }
+        @keyframes anim {
+          to {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
