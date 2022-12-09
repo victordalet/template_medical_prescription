@@ -9,6 +9,9 @@
   cursor: pointer;
   transition: 0.5s;
   transform: translateY(10px);
+  position: fixed;
+  z-index: 3;
+  margin-left: 22.5vw;
 
 }
 

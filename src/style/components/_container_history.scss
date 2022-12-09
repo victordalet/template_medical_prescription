@@ -1,0 +1,36 @@
+.container-global-history {
+  padding-top: 130px;
+  padding-bottom: 20px;
+}
+
+
+.container-history {
+  width: 90vw;
+  height: 100px;
+  border-radius: 20px;
+  background: $color-white;
+  box-shadow: 9px 9px 16px rgba(0,0,0,0.3),-9px -9px 16px rgba(0,0,0,0.3);
+  margin: auto;
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  margin-top: 20px;
+
+  &:hover {
+    box-shadow: none;
+    transform: scale(0.8);
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  h3 {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-left: 63vw;
+  }
+
+}
