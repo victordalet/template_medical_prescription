@@ -2,10 +2,14 @@ import React from 'react';
 
 
 function redirection() {
-    if (window.innerWidth)
-    setTimeout(() => {
+    if (window.innerWidth <= 500) {
+        setTimeout(() => {
+            window.location.href = "/ordonances";
+        }, 800);
+    }
+    else {
         window.location.href = "/ordonances";
-    },800);
+    }
 }
 
 const ContainerHistoryEmpty = () => {

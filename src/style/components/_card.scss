@@ -1,0 +1,35 @@
+.container-card {
+
+  padding-top: $top-dist;
+  padding-bottom: 20px;
+  margin-left: 10vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .card {
+    width: 35vw;
+    height: 35vw;
+    border-radius: 5px;
+    background: $color-white;
+    border: 5px solid $color-white;
+    transition: 0.5s;
+    text-align: center;
+    color: $color-black;
+    font-size: 12px;
+    margin-top: 40px;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 9px 9px 16px rgba(0,0,0,0.3),-9px -9px 16px rgba(0,0,0,0.3);
+    }
+
+    h3 {
+      position: relative;
+      top: 60%;
+    }
+
+    img {
+
+    }
+  }
+}
