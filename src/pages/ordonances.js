@@ -5,7 +5,7 @@ import Card from "../components/card";
 import Form from "../components/form";
 
 
-const data_prescirtion = ["","","truc","","","","",""];
+const data_prescirtion = ["","","","","",""];
 
 const Ordo = () => {
     return (

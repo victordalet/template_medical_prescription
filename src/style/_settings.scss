@@ -5,11 +5,13 @@
 
 $font-1: "font-1", sans-serif;
 
-$color-black       : #000;
+$color-black       : #13232f;
 $color-white       : #fff;
+$color-grey        : #a0b3b0;
 $color-green       : #09a766;
 $color-blue        : #13E3E0;
 $color-green-white : #04fe4d;
+$color-green-black : #056F43;
 $top-dist          : 130px;
 
 
@@ -23,6 +25,10 @@ $top-dist          : 130px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
