@@ -10,10 +10,10 @@ function active() {
 function Card(name) {
     return (
         <div className="card" onClick={active}>
-            <img src="../assets/img/truc.png" alt={name}/>
+            <img src={require("../assets/img/"+name+".png")} alt={name}/>
             <h3>{name}</h3>
         </div>
     );
-};
+}
 
 export default Card;

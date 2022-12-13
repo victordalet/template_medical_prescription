@@ -9,3 +9,12 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+/*
+    json envoie
+
+    data
+    formulaire supplémentaire
+    pdf maker -> dans historique aussi
+    printer
+ */

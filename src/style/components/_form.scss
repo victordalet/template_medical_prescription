@@ -11,6 +11,31 @@ form {
     transform: translateX(0px);
   }
 
+  &.home {
+    position: relative;
+    min-height: 50vh;
+    width: 80vw;
+    transform: translateX(0px);
+    margin: auto;
+    padding: 20px;
+    margin-top: -10vh;
+    margin-bottom: 20vh;
+
+    label {
+      left: -5vw;
+
+      &:nth-child(1) {
+        transform: translateY(20px) translateX(20vw) ;
+      }
+    }
+
+  }
+
+  h2 {
+    font-size: 20px;
+    color: $color-white;
+  }
+
   ion-icon {
     font-size: 40px;
     position: fixed;
@@ -33,7 +58,7 @@ form {
       color: $color-white;
     }
 
-    &:nth-child(1) {
+    &:nth-child(2) {
       transform: translateY(20px) translateX(20vw);
     }
   }
@@ -52,7 +77,10 @@ form {
 
     &:hover,&:focus {
       border: 3px solid $color-green;
+      outline: none;
+
     }
+
 
     &[type="button"] {
       background: $color-green;

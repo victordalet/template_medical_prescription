@@ -7,6 +7,6 @@ function ContainerHistory(name,date) {
             <h3>Le :  {date}</h3>
         </div>
     );
-};
+}
 
 export default ContainerHistory;

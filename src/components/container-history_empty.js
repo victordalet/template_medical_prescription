@@ -12,14 +12,14 @@ function redirection() {
     }
 }
 
-const ContainerHistoryEmpty = () => {
+function ContainerHistoryEmpty(sentence1,sentence2) {
 
     return (
         <div className="container-history-empty">
-            <h2>Vous n'avez pas réaliser d'ordonances</h2>
-            <a onClick={redirection} className="btn">Commencer<span><ion-icon name="arrow-forward-outline"></ion-icon></span></a>
+            <h2>{sentence1}</h2>
+            <a  onClick={redirection} className="btn">{sentence2}<span><ion-icon name="arrow-forward-outline"></ion-icon></span></a>
         </div>
     );
-};
+}
 
 export default ContainerHistoryEmpty;

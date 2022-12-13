@@ -1,13 +1,10 @@
 import React from 'react';
 import old_data from "../assets/data/history.json";
-
-
+import data from "../assets/data/user.json";
 
 function write(data) {
-    const fs = require("fs");
-    fs.writeFile("../assets/data/history.json", data, (err) => {
-        if (err) throw err;
-    });
+    let f = require("fs");
+    f.writeFile("../assets/data/history.json",data);
 }
 
 function save(data) {
@@ -31,7 +28,6 @@ function get_data() {
 
 function active() {
     document.querySelector("form").classList.toggle("active");
-    console.log("t");
 }
 
 
@@ -40,13 +36,13 @@ function Form() {
         <form>
             <ion-icon name="arrow-back-outline" onClick={active} ></ion-icon>
             <label  htmlFor={"id-prescripteur"} >ID :</label>
-            <input type={"text"}   id={"id-prescripteur"} />
+            <input type={"text"}   id={"id-prescripteur"} value={(data[0]) ? data[0]:""}/>
             <label htmlFor={"name-prescripteur" } >Nom :</label>
-            <input type={"text"}   id={"name-prescripteur"} />
+            <input type={"text"}   id={"name-prescripteur"} value={(data[1]) ? data[1]:""} />
             <label htmlFor={"first-name-prescripteur"} >Prénom :</label>
-            <input type={"text"}   id={"fisrt-name-prescripteur"} />
+            <input type={"text"}   id={"first-name-prescripteur"} value={(data[2]) ? data[2]:""} />
             <label htmlFor={"tel-prescripteur"} >Tel :</label>
-            <input type={"text"}    id={"tel-prescripteur"} />
+            <input type={"text"}    id={"tel-prescripteur"} value={(data[3]) ? data[3]:""} />
             <label htmlFor={"name-patient"} >Nom Patient :</label>
             <input type={"text"}  id={"name-patient"} />
             <label htmlFor={"first-name-patient"}>Prénom Patient :</label>
