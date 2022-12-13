@@ -89,6 +89,7 @@ form {
       &:hover {
         background: $color-green-black;
         border: 3px solid $color-green-black;
+        transform: scale(1.2);
       }
     }
 

@@ -3,7 +3,9 @@ import Navigation from '../components/navigation';
 import Logo from '../components/logo';
 import ContainerHistory from "../components/container-history";
 import ContainerHistoryEmpty from "../components/container-history_empty";
-import data from "../assets/data/history.json";
+
+const data = JSON.parse(localStorage.getItem("data"));
+console.log(data);
 
 const History = () => {
 

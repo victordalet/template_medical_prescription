@@ -1,10 +1,13 @@
 import React from 'react';
-import old_data from "../assets/data/history.json";
-import data from "../assets/data/user.json";
 
-function write(data) {
-    let f = require("fs");
-    f.writeFile("../assets/data/history.json",data);
+
+const data = JSON.parse(localStorage.getItem("user"));
+const old_data = JSON.parse(localStorage.getItem("data"));
+
+function write(new_data) {
+    console.log(new_data);
+    localStorage.setItem("data",JSON.stringify(new_data));
+    document.location = "ordonances";
 }
 
 function save(data) {
@@ -34,24 +37,25 @@ function active() {
 function Form() {
     return (
         <form>
-            <ion-icon name="arrow-back-outline" onClick={active} ></ion-icon>
-            <label  htmlFor={"id-prescripteur"} >ID :</label>
-            <input type={"text"}   id={"id-prescripteur"} value={(data[0]) ? data[0]:""}/>
-            <label htmlFor={"name-prescripteur" } >Nom :</label>
-            <input type={"text"}   id={"name-prescripteur"} value={(data[1]) ? data[1]:""} />
-            <label htmlFor={"first-name-prescripteur"} >Prénom :</label>
-            <input type={"text"}   id={"first-name-prescripteur"} value={(data[2]) ? data[2]:""} />
-            <label htmlFor={"tel-prescripteur"} >Tel :</label>
-            <input type={"text"}    id={"tel-prescripteur"} value={(data[3]) ? data[3]:""} />
-            <label htmlFor={"name-patient"} >Nom Patient :</label>
-            <input type={"text"}  id={"name-patient"} />
+            <ion-icon name="arrow-back-outline" onClick={active}></ion-icon>
+            <label htmlFor={"id-prescripteur"}>ID :</label>
+            <input required="required" type={"text"} id={"id-prescripteur"} defaultValue={(data[0]) ? data[0] : ""}/>
+            <label htmlFor={"name-prescripteur"}>Nom :</label>
+            <input required="required" type={"text"} id={"name-prescripteur"} defaultValue={(data[1]) ? data[1] : ""}/>
+            <label htmlFor={"first-name-prescripteur"}>Prénom :</label>
+            <input required="required" type={"text"} id={"first-name-prescripteur"} defaultValue={(data[2]) ? data[2] : ""}/>
+            <label htmlFor={"tel-prescripteur"}>Tel :</label>
+            <input required="required" type={"text"} id={"tel-prescripteur"} defaultValue={(data[3]) ? data[3] : ""}/>
+            <label htmlFor={"name-patient"}>Nom Patient :</label>
+            <input required="required" type={"text"} id={"name-patient"}/>
             <label htmlFor={"first-name-patient"}>Prénom Patient :</label>
-            <input type={"input"}  id={"first-name-patient"}/>
-            <input type={"button"} id={"send"}  value={"Envoyer"}/>
+            <input type={"input"} id={"first-name-patient"}/>
+            <input type={"button"} id={"send"} value={"Envoyer"}/>
             <input type={"button"} id={"print"} value={"Imprimer"}/>
-            <input type={"button"} id={"save"}  value={"Sauvegarder"} onClick={get_data}/>
+            <input type={"button"} id={"save"} value={"Sauvegarder"} onClick={get_data}/>
         </form>
     );
+
 }
 
 export default Form;

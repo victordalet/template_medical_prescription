@@ -3,7 +3,8 @@ import Navigation from '../components/navigation';
 import Logo from '../components/logo';
 import ContainerHistory_empty from "../components/container-history_empty";
 import Information from "../components/information";
-import data from "../assets/data/history.json";
+
+const data = JSON.parse(localStorage.getItem("data"));
 
 
 
