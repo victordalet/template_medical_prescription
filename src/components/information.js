@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import SignaturePad from "react-signature-canvas";
 
 const data = JSON.parse(localStorage.getItem("user"));
@@ -20,7 +20,6 @@ function new_information(imageURL) {
 
 function Information() {
 
-    const [imageURL,setImageUrl] = useState();
     const sigCanvas = useRef({});
 
     function clear() {

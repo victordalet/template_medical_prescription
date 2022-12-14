@@ -10,13 +10,3 @@ root.render(
   </React.StrictMode>
 );
 
-
-
-/*
-    template pdf
-    afficher pdf
-    signature
-    enregister pdf
-    partager pdf
-
-*/

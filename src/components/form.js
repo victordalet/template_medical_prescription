@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react';
 import SignaturePad from "react-signature-canvas";
+import createPdf from "../components/pdf";
 
 const data_user = JSON.parse(localStorage.getItem("user"));
 const old_data = JSON.parse(localStorage.getItem("data"));
@@ -8,7 +9,6 @@ const old_data = JSON.parse(localStorage.getItem("data"));
 function write(new_data) {
     console.log(new_data);
     localStorage.setItem("data",JSON.stringify(new_data));
-    document.location = "ordonances";
 }
 
 function save(data) {
@@ -45,8 +45,13 @@ function Form() {
             data.push(sigCanvas.current.getTrimmedCanvas().toDataURL("signature/png"))
         }
         save(data);
+        return data;
     }
 
+    function print() {
+        const lst = get_data();
+        createPdf(lst);
+    }
 
 
     return (
@@ -68,8 +73,7 @@ function Form() {
             <div className={"signature"}>
                 {(data_user[4]) ? <img src={data_user[4]}/> : <SignaturePad ref={sigCanvas} canvasProps={{width: 70, height: 200}}/> }
             </div>
-            <input type={"button"} id={"send"} value={"Envoyer"}/>
-            <input type={"button"} id={"print"} value={"Imprimer"}/>
+            <input type={"button"} id={"print"} value={"Télécharger"} onClick={print}/>
             <input type={"button"} id={"save"} value={"Sauvegarder"} onClick={get_data}/>
         </form>
     );

@@ -5,8 +5,8 @@ import Card from "../components/card";
 import Form from "../components/form";
 
 
-const data_prescirtion = ["truc","truc","truc","truc","truc","truc","truc","truc"];
 
+const data_prescirtion = ["truc","truc","truc","truc","truc","truc","truc","truc"];
 const Ordo = () => {
     return (
         <div>
@@ -16,6 +16,7 @@ const Ordo = () => {
                 {data_prescirtion.map((i) => Card(i))}
             </div>
             <Form/>
+
 
         </div>
     );

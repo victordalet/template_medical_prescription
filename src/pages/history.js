@@ -15,7 +15,7 @@ const History = () => {
             <Navigation/>
             <div className="container-global-history">
                 {(data.length === 0) ? (ContainerHistoryEmpty("Vous n'avez pas réalisé d'ordonances","Commencer")) : ""}
-                {data.map((i) => ContainerHistory(i[0],i[1]))}
+                {data.map((i) => ContainerHistory(i))}
             </div>
         </div>
     );
