@@ -95,5 +95,24 @@ form {
 
   }
 
+  .signature {
+    background: $color-white;
+    width: 70vw;
+    height: 20vh;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .sign {
+    margin-top: 5px;
+    margin-right: 0px;
+    width: 30vw;
+  }
+
+  .label-sign {
+    transform: translateX(10vw) translateY(-20px);
+  }
+
 }
 

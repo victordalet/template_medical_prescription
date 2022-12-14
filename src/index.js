@@ -13,10 +13,10 @@ root.render(
 
 
 /*
-    json envoie
+    template pdf
+    afficher pdf
+    signature
+    enregister pdf
+    partager pdf
 
-    data
-    formulaire supplémentaire
-    pdf maker -> dans historique aussi
-    printer
- */
+*/
