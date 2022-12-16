@@ -1,6 +1,5 @@
 .logo {
   @include verticalCenter;
-  margin: 5px auto;
   width: 200px;
   border-radius: 25px;
   padding: 5px 0;
@@ -11,8 +10,9 @@
   transform: translateY(10px);
   position: fixed;
   z-index: 3;
-  margin-left: 22.5vw;
+  left: calc(50vw - 100px);
 
 }
+
 
 

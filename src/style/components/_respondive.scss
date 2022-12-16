@@ -1,0 +1,42 @@
+@media screen and (min-width: 800px) {
+
+   form.home {
+     width: 50vw;
+   }
+
+  form .signature {
+    width: 30vw;
+  }
+
+  form .sign {
+    width: 100px;
+    cursor: pointer;
+    margin-left: 32vw;
+
+
+  }
+
+  form .label-sign {
+    transform: translateX(15vw) translateY(-20px);
+  }
+  .container-card {
+    grid-template-columns: repeat(4, 1fr);
+
+    .card {
+      width: 150px;
+      height: 150px;
+      margin-top: 5vh;
+    }
+  }
+
+  .container-global-history .container-history {
+    width: 30vw;
+
+    h3 {
+      padding-left: 22vw;
+    }
+
+  }
+
+
+}
